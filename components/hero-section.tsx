@@ -86,12 +86,13 @@ export function HeroSection() {
                   <Image
                     src="/images/hassan-profile.png"
                     alt="Hassan Mohamed"
-                    
                     width={300}
                     height={300}
                     className="rounded-full object-cover"
                   />
+                  
                 </div>
+
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full animate-pulse" />
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary/30 rounded-full animate-pulse delay-1000" />

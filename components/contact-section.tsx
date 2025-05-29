@@ -171,13 +171,13 @@ export function ContactSection() {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                   <Button variant="outline" asChild className="h-16">
-                    <a href="https://github.com/hassan" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Hassan1ai" target="_blank" rel="noopener noreferrer">
                       <Github className="h-6 w-6 mb-2" />
                       <span className="block text-sm">GitHub</span>
                     </a>
                   </Button>
                   <Button variant="outline" asChild className="h-16">
-                    <a href="https://linkedin.com/in/hassan" target="_blank" rel="noopener noreferrer">
+                    <a href="www.linkedin.com/in/hassan-mohammed-1290472a5" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="h-6 w-6 mb-2" />
                       <span className="block text-sm">LinkedIn</span>
                     </a>
