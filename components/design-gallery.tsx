@@ -32,47 +32,41 @@ const designCategories = [
 
 const designWorks = [
   {
-    title: "E-commerce Mobile App UI",
+    title: "Recyclonic Mobile App UI",
     category: "UI/UX Designs",
     tools: ["Figma", "Photoshop"],
-    image: "/images/ui-design-1.jpg",
-    link: "https://behance.net/gallery/ecommerce-ui",
+    image: "/images/Screenshot 2025-06-03 233035.png",
+    link: "https://www.figma.com/design/aX3dAinmYMhdQ2yvlTe39b/Recyclonic1?node-id=0-1&t=AHh9SNiRqvrzbDPG-1",
   },
   {
-    title: "Social Media Campaign",
+    title: "Social Media posts",
     category: "Social Media",
     tools: ["Photoshop", "Illustrator"],
-    image: "/images/social-media-1.jpg",
-    link: "https://behance.net/gallery/social-campaign",
+    image: "/images/Blue and White Modern Hiring Team Facebook Post (2).png",
+    link: "https://www.facebook.com/photo.php?fbid=665064979631402&set=pb.100083837165938.-2207520000&type=3",
   },
   {
-    title: "Tech Startup Branding",
+    title: "Posts For Elsewedy School",
     category: "Branding",
-    tools: ["Illustrator", "Figma"],
-    image: "/images/branding-1.jpg",
-    link: "https://behance.net/gallery/startup-branding",
+    tools: ["Illustrator", "Photoshop"],
+    image: "/images/& Partners (1).png",
+    link: "https://www.behance.net/Hassanmohammedai",
   },
   {
-    title: "Product Launch Video",
+    title: "Elsewedy Activity Video",
     category: "Video Edits",
     tools: ["Premiere Pro", "After Effects"],
-    image: "/images/ui-design-2.jpg",
-    link: "https://behance.net/gallery/product-video",
+    image: "/images/Screenshot 2025-06-03 234235.png",
+    link: "https://www.facebook.com/100083837165938/videos/959065645896398",
   },
   {
     title: "Dashboard Interface",
     category: "UI/UX Designs",
     tools: ["Figma", "Principle"],
-    image: "/images/social-media-2.jpg",
-    link: "https://behance.net/gallery/dashboard-ui",
+    image: "/images/Screenshot 2025-06-03 2346066.png",
+    link: "https://www.figma.com/design/fGsQcwf1D07Vf1k2F9sxaJ/Untitled?node-id=0-1&t=fXAy4io8LVPpvZ71-1",
   },
-  {
-    title: "Instagram Story Templates",
-    category: "Social Media",
-    tools: ["Photoshop", "Canva"],
-    image: "/images/branding-2.jpg",
-    link: "https://behance.net/gallery/story-templates",
-  },
+ 
 ]
 
 export function DesignGallery() {
@@ -164,7 +158,7 @@ export function DesignGallery() {
           className="text-center mt-12"
         >
           <Button variant="outline" size="lg" asChild>
-            <a href="https://behance.net/hassan" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.behance.net/Hassanmohammedai" target="_blank" rel="noopener noreferrer">
               View Full Portfolio on Behance
               <ExternalLink className="h-4 w-4 ml-2" />
             </a>

@@ -105,12 +105,18 @@ export function EnhancedHeroSection() {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button variant="secondary" size="lg" className="text-lg px-8 py-6">
-                  <Download className="h-5 w-5 mr-2" />
-                  Resume
-                </Button>
+                <a
+                  href="https://drive.google.com/file/d/1HY7BpFvnDOEWVwLlgUwNcwyUBsCnpBjG/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="secondary" size="lg" className="text-lg px-8 py-6">
+                    <Download className="h-5 w-5 mr-2" />
+                    Resume
+                  </Button>
+                </a>
               </motion.div>
-            </motion.div>
+            </motion.div> {/* ← هذا هو القوس المفقود اللي كان سبب الخطأ */}
 
             <motion.div variants={itemVariants} className="flex justify-center lg:justify-start space-x-6">
               {[

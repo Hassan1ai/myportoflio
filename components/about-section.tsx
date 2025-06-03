@@ -130,21 +130,7 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="mt-16"
         >
-          <h3 className="text-2xl font-bold text-center mb-8">Behind the Scenes</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <VideoShowcase
-              title="Coding Process"
-              description="Watch how I approach problem-solving and build applications from scratch"
-              videoSrc="/videos/coding-demo.mp4"
-              poster="/images/recyclonic-dashboard.jpg"
-            />
-            <VideoShowcase
-              title="Design Workflow"
-              description="My creative process from concept to final design implementation"
-              videoSrc="/videos/design-process.mp4"
-              poster="/images/ui-design-1.jpg"
-            />
-          </div>
+         
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
