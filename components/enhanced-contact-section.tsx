@@ -80,13 +80,13 @@ export function EnhancedContactSection() {
     {
       icon: Github,
       name: "GitHub",
-      href: "https://github.com/hassanmohamed23",
+      href: "https://github.com/Hassan1ai",
       color: "hover:bg-gray-900 hover:text-white",
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      href: "https://linkedin.com/in/hassan",
+      href: "www.linkedin.com/in/hassan-mohammed-1290472a5",
       color: "hover:bg-blue-600 hover:text-white",
     },
     {
