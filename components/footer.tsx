@@ -20,12 +20,12 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://github.com/hassan" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Hassan1ai" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://linkedin.com/in/hassan" target="_blank" rel="noopener noreferrer">
+                <a href="www.linkedin.com/in/hassan-mohammed-1290472a5" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
