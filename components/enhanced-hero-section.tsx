@@ -120,8 +120,8 @@ export function EnhancedHeroSection() {
 
             <motion.div variants={itemVariants} className="flex justify-center lg:justify-start space-x-6">
               {[
-                { icon: Github, href: "https://github.com/hassanmohamed23", label: "GitHub" },
-                { icon: Linkedin, href: "https://linkedin.com/in/hassan", label: "LinkedIn" },
+                { icon: Github, href: "https://github.com/Hassan1ai", label: "GitHub" },
+                { icon: Linkedin, href: "www.linkedin.com/in/hassan-mohammed-1290472a5", label: "LinkedIn" },
                 { icon: MessageCircle, href: "https://wa.me/201099549075", label: "WhatsApp" },
                 { icon: Mail, href: "mailto:hassan.0523042@gmail.com", label: "Email" },
               ].map((social, index) => (
