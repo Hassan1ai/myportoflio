@@ -92,7 +92,7 @@ export function EnhancedContactSection() {
     {
       icon: MessageCircle,
       name: "WhatsApp",
-      href: "https://wa.me/201094549075",
+      href: "https://wa.me/201099549075",
       color: "hover:bg-green-600 hover:text-white",
     },
   ]
