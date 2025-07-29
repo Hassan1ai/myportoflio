@@ -16,7 +16,7 @@ import { PageTransition } from "@/components/page-transition"
 export default function Home() {
   return (
     <PageTransition>
-      <div className="min-h-screen bg-background relative">
+      <div className="min-h-screen bg-background relative overflow-hidden">
         <ScrollProgress />
         <TechBackground />
         <FloatingElements />
