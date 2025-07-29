@@ -154,7 +154,7 @@ export function EnhancedHeroSection() {
                 <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
                   <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
                     <Image
-                      src="/images/hassan-profile.png"
+                      src="/images/profill.jpg"
                       alt="Hassan Mohamed"
                       width={300}
                       height={300}
