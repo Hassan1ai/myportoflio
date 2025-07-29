@@ -144,25 +144,26 @@ export function EnhancedHeroSection() {
             </motion.div>
           </div>
 
-          <motion.div variants={itemVariants} className="flex-1 flex justify-center lg:justify-end">
-            <div className="relative">
-              <motion.div
-                className="w-80 h-80 rounded-full bg-gradient-to-br from-primary to-primary/50 p-2"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
-                  <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
-                    <Image
-                      src="/images/profill.jpg"
-                      alt="Hassan Mohamed"
-                      width={300}
-                      height={300}
-                      className="rounded-full object-cover"
-                    />
-                  </motion.div>
-                </div>
-              </motion.div>
+          <motion.div variants={itemVariants} className="flex-1 flex justify-start lg:justify-center">
+  <div className="relative">
+    <motion.div
+      className="w-96 h-96 rounded-full bg-gradient-to-br from-primary to-primary/50 p-2"
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    >
+      <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
+        <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 900, damping: 100 }}>
+          <Image
+            src="/images/profill.jpg"
+            alt="Hassan Mohamed"
+            width={380}
+            height={380}
+            className="rounded-full object-cover"
+          />
+        </motion.div>
+      </div>
+    </motion.div>
+
 
               {/* Floating elements */}
               <motion.div
