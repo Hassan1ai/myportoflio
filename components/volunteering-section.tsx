@@ -12,7 +12,7 @@ const volunteeringActivities = [
       "Organized and participated in community campaigns to raise awareness about proper e-waste disposal and recycling practices.",
     icon: Recycle,
     impact: "Reached 500+ community members",
-    image: "/images/volunteering-1.jpg",
+    image: "/images/AdobeStock_500968458.jpeg",
   },
   {
     title: "React.js & JavaScript Workshops",
@@ -20,14 +20,14 @@ const volunteeringActivities = [
       "Conducted technical workshops for fellow students, sharing knowledge about modern web development technologies.",
     icon: Code,
     impact: "Trained 50+ students",
-    image: "/images/volunteering-2.jpg",
+    image: "/images/Screenshot 2025-07-29 071001.png",
   },
   {
     title: "Peer Coding Support",
     description: "Provided mentorship and coding support to junior students learning programming fundamentals.",
     icon: Users,
     impact: "Mentored 20+ students",
-    image: "/images/volunteering-3.jpg",
+    image: "/images/Untitled design.png",
   },
 ]
 
