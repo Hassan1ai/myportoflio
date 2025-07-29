@@ -29,6 +29,20 @@ const volunteeringActivities = [
     impact: "Mentored 20+ students",
     image: "/images/Untitled design.png",
   },
+  {
+    title: "Volunteer Organizer – Youth Knowledge Forum (4th Edition)",
+    description: "Assisted in organizing the 4th Youth Knowledge Forum (2025), supporting VIP coordination and event logistics for 2,000+ attendees.",
+    icon: Users,
+    impact: "Handled logistics for a high-profile event with 2,000+ participants.",
+    image: "/images/profill.jpg",
+  },
+  {
+    title: "Educational Visit – Higher Institute of Engineering",
+    description: "Visited the Mechatronics Department to explore student projects, exchange knowledge with peers and faculty, and gain insights into various engineering disciplines.",
+    icon: Users,
+    impact: "Participated in a technical visit to the Higher Institute of Engineering and gained insights into cross-disciplinary innovation.",
+    image: "/images/1748070863700.jpeg",
+  },
 ]
 
 export function VolunteeringSection() {
