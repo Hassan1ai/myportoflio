@@ -53,6 +53,13 @@ const designWorks = [
     link: "https://www.behance.net/Hassanmohammedai",
   },
   {
+    title: "Posts For Elsewedy School",
+    category: "Branding",
+    tools: ["Illustrator", "Photoshop"],
+    image: "/images/WhatsApp Image 2025-06-27 at 20.28.01_e17fb886.jpg",
+    link: "https://www.behance.net/Hassanmohammedai",
+  },
+  {
     title: "Elsewedy Activity Video",
     category: "Video Edits",
     tools: ["Premiere Pro", "After Effects"],
