@@ -1,7 +1,5 @@
 "use client"
-
 import type React from "react"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -26,16 +24,38 @@ export function EnhancedContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch("https://formspree.io/f/mblkkjpz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      })
 
-    toast({
-      title: "Message sent successfully! 🎉",
-      description: "Thank you for reaching out. I'll get back to you within 24 hours.",
-    })
-
-    setFormData({ name: "", email: "", subject: "", message: "" })
-    setIsSubmitting(false)
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully! 🎉",
+          description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+        })
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      } else {
+        throw new Error("Failed to send message")
+      }
+    } catch (error) {
+      toast({
+        title: "Failed to send message ❌",
+        description: "Something went wrong. Please try again or contact me directly.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -86,7 +106,7 @@ export function EnhancedContactSection() {
     {
       icon: Linkedin,
       name: "LinkedIn",
-      href: "www.linkedin.com/in/hassan-mohammed-1290472a5",
+      href: "https://www.linkedin.com/in/hassan-mohammed-1290472a5",
       color: "hover:bg-blue-600 hover:text-white",
     },
     {
@@ -146,6 +166,7 @@ export function EnhancedContactSection() {
                         required
                         placeholder="Your full name"
                         className="transition-all focus:scale-105"
+                        disabled={isSubmitting}
                       />
                     </motion.div>
                     <motion.div
@@ -165,6 +186,7 @@ export function EnhancedContactSection() {
                         required
                         placeholder="your.email@example.com"
                         className="transition-all focus:scale-105"
+                        disabled={isSubmitting}
                       />
                     </motion.div>
                   </div>
@@ -184,6 +206,7 @@ export function EnhancedContactSection() {
                       required
                       placeholder="What's this about?"
                       className="transition-all focus:scale-105"
+                      disabled={isSubmitting}
                     />
                   </motion.div>
                   <motion.div
@@ -203,6 +226,7 @@ export function EnhancedContactSection() {
                       placeholder="Tell me about your project or just say hello!"
                       rows={6}
                       className="transition-all focus:scale-105"
+                      disabled={isSubmitting}
                     />
                   </motion.div>
                   <motion.div

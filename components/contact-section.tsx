@@ -1,9 +1,8 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
+import type { FormEvent, ChangeEvent } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -18,29 +17,53 @@ export function ContactSection() {
     email: "",
     message: "",
   })
+
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const response = await fetch("https://formspree.io/f/mblkkjpz", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    })
+      if (response.ok) {
+        toast({
+          title: "تم إرسال الرسالة!",
+          description: "شكراً لتواصلك. سيتم الرد عليك قريباً.",
+        })
+        setFormData({ name: "", email: "", message: "" })
+      } else {
+        toast({
+          title: "خطأ في الإرسال",
+          description: "من فضلك حاول مرة أخرى لاحقاً.",
+          variant: "destructive",
+        })
+      }
+    } catch (error) {
+      toast({
+        title: "حدث خطأ غير متوقع",
+        description: "تأكد من اتصالك بالإنترنت أو حاول مرة أخرى لاحقاً.",
+        variant: "destructive",
+      })
+    }
 
-    setFormData({ name: "", email: "", message: "" })
     setIsSubmitting(false)
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }))
   }
 
@@ -61,6 +84,7 @@ export function ContactSection() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -123,6 +147,7 @@ export function ContactSection() {
             </Card>
           </motion.div>
 
+          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -141,10 +166,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold">Email</p>
-                    <a
-                      href="mailto:hassan.0523042@gmail.com"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
+                    <a href="mailto:hassan.0523042@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                       hassan.0523042@gmail.com
                     </a>
                   </div>
@@ -177,7 +199,7 @@ export function ContactSection() {
                     </a>
                   </Button>
                   <Button variant="outline" asChild className="h-16">
-                    <a href="www.linkedin.com/in/hassan-mohammed-1290472a5" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/hassan-mohammed-1290472a5" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="h-6 w-6 mb-2" />
                       <span className="block text-sm">LinkedIn</span>
                     </a>
